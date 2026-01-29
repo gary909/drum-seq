@@ -1,0 +1,67 @@
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.machine-body {
+    background: #333;
+    padding: 30px;
+    border-radius: 10px;
+    border: 4px solid #444;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    color: #00ff88;
+}
+
+.controls {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+button {
+    background: #00ff88;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.track {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.step-grid {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    gap: 5px;
+}
+
+.step {
+    width: 30px;
+    height: 45px;
+    background: #444;
+    border: 1px solid #222;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+/* When a user clicks a step to turn it on */
+.step.active {
+    background: #00ff88;
+    box-shadow: 0 0 8px #00ff88;
+}
+
+/* When the playhead is currently over the step */
+.step.playing {
+    border: 2px solid white;
+    transform: scaleY(1.1);
+}
